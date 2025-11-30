@@ -70,7 +70,8 @@ defineExpose({
     transition: transform 0.3s ease;
     backdrop-filter: blur(10px);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    max-width: 400px;
+    max-width: 300px;
+
 
 
     &:hover {

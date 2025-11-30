@@ -83,7 +83,7 @@ const router = createRouter({
 //导航守卫
 router.beforeEach((to) => { 
   const useStore = useUserStore()
-  if (!useStore.token && to.path !== '/login')
+  if (!useStore.token && to.path !== '/login' && to.path !== '/register')
     return '/login'
 })
 export default router
