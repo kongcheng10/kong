@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 import Layout from '@/views/layout/LayoutView.vue'
 import Home from '@/views/layout/HomeView.vue'
 import About from '@/views/layout/about/AboutView.vue'
@@ -15,7 +15,7 @@ import user from '@/views/User/UserPage.vue'
 import { useUserStore } from '@/stores/user'                //引入用户仓库获得token
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHashHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',
