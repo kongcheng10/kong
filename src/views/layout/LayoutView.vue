@@ -132,6 +132,7 @@ const  handlecommand = async (command) => {
   color: white;
   padding: 0;
   .header-content {
+    box-sizing: border-box;       // 防止宽度超出
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -156,6 +157,7 @@ const  handlecommand = async (command) => {
 }
 // 菜单样式调整
 .header-menu {
+  min-width: 0; // ←←← 加这一行 否则菜单项会超出容器宽度加这个属性菜单在空间不足时自动变成折叠菜单 */
   border-bottom: none;
   flex: 1; // 填充剩余空间重要
   justify-content: flex-end;
