@@ -130,7 +130,7 @@ const handleForgetPassword = () => {
   justify-content: center;
   align-items: center;
   height: 98vh;
-  background: url('@/assets/1.jpg') no-repeat center center ;
+  background: url('@/assets/1.webp') no-repeat center center ;
   background-size: cover;
   
   .form-title {

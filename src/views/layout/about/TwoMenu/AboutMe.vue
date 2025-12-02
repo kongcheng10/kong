@@ -1,8 +1,8 @@
 <script setup>
 // 显式导入图片资源
-import 三七 from '@/assets/37.jpg'
-import 梓 from '@/assets/梓.jpg'
-import 千珏 from '@/assets/千珏.jpg'
+import 三七 from '@/assets/37.webp'
+import 梓 from '@/assets/梓.webp'
+import 千珏 from '@/assets/千珏.webp'
 
 </script>
 
@@ -51,7 +51,7 @@ import 千珏 from '@/assets/千珏.jpg'
   .titleimg {
     min-height: 100px;
     width: 100%;
-    background-image: url('@/assets/miku.png');
+    background-image: url('@/assets/miku.webp');
     background-position: center 40%;
     background-repeat: no-repeat;
     background-size: cover;

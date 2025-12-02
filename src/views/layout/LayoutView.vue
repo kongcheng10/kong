@@ -187,7 +187,7 @@ const  handlecommand = async (command) => {
 .el-main {
   // flex: 1 1 auto;
 
-  background: url('@/assets/background.png') no-repeat center center fixed;
+  background: url('@/assets/background.webp') no-repeat center center fixed;
   background-size: cover;
   margin: 0;
   padding: 0;

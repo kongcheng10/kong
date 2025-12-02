@@ -1,8 +1,8 @@
 <script setup>
 import AlbumCard from '@/components/HomeCard.vue' // 引入卡片组件
-import img1 from '@/assets/爱丽丝.jpg' // 导入图片因为不能直接用路径但是可以用网络require'来引入
-import img2 from '@/assets/星野.jpg'
-import img3 from '@/assets/xixi.jpg'
+import img1 from '@/assets/爱丽丝.webp' // 导入图片因为不能直接用路径但是可以用网络require'来引入
+import img2 from '@/assets/星野.webp'
+import img3 from '@/assets/xixi.webp'
 </script>
 
 <template>
@@ -12,8 +12,10 @@ import img3 from '@/assets/xixi.jpg'
         <p> &emsp;&emsp;Love the life you live</p> <p>Live the life you love</p>  
       </div>
     </div>
+
     <div class="video-section">
-      <video src="@/assets/shiroko.mp4" loop autoplay muted></video>
+      <!-- 原本是 video，现在移除，改用 background-image -->
+      <!-- <video src="@/assets/shiroko.mp4" loop autoplay muted></video> -->
       <!-- <AlbumCard                                   如果数据是可以从后端拿的话这里就可以用v-for循环来生成卡片不用一个个写死
           v-for="item in albumList"
           :key="item.id"
@@ -80,16 +82,10 @@ import img3 from '@/assets/xixi.jpg'
   width: 100%;
   height: 100vh; /* 下半部分占满视窗 */
   position: relative;
-
-  video {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
-
+  background-image: url('@/assets/shiroko.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   .card { 
     position: relative;
     width: 100%;

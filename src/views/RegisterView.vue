@@ -203,7 +203,7 @@ const goToLogin = () => {
   justify-content: center;
   align-items: center;
   height: 98vh;
-  background: url('@/assets/2.jpg') no-repeat center center fixed;
+  background: url('@/assets/2.webp') no-repeat center center fixed;
   background-size: cover;
   .form-title {
     text-align: center;

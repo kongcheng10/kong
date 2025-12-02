@@ -50,7 +50,7 @@
     position: relative;
     top: 1vh;
     left: 10%;
-    background: url('@/assets/Clannad.png') no-repeat center;
+    background: url('@/assets/Clannad.webp') no-repeat center;
     background-size: cover;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
     opacity: 0.9;
@@ -127,25 +127,25 @@
 }
 
 .mate .icon.qq {
-    background: url('@/assets/qq.png') no-repeat center;
+    background: url('@/assets/qq.webp') no-repeat center;
     background-size: 70%;
 }
 
 .mate .icon.vx {
-    background: url('@/assets/vx.png') no-repeat center;
+    background: url('@/assets/vx.webp') no-repeat center;
     background-size: 70%;
 }
 
 .mate .icon.bilibili {
-    background: url('@/assets/bilibili.png') no-repeat center;
+    background: url('@/assets/bilibili.webp') no-repeat center;
     background-size: 70%;
-    background-color: #ff6f61;
-    border: 2px solid #ff9e9e;
+
+
 }
 
 .mate .icon.github {
-    background: url('@/assets/github.png') no-repeat center;
-    background-size: 70%;
-    background-color: #333;
+    background: url('@/assets/github.webp') no-repeat center;
+    background-size: 100%;
+
 }
 </style>
