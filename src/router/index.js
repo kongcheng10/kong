@@ -4,6 +4,7 @@ import Home from '@/views/layout/HomeView.vue'
 import About from '@/views/layout/about/AboutView.vue'
 import AboutME from '@/views/layout/about/TwoMenu/AboutMe.vue'
 import AboutWeb from '@/views/layout/about/TwoMenu/AboutWeb.vue'
+import Category from '@/views/layout/about/ThreeMenu/CategoryView.vue'
 import Album from '@/views/layout/Album/AlbumView.vue'
 import More from '@/views/layout/Album/MoreAlbum.vue'
 import Join from '@/views/layout/JoinView.vue'
@@ -42,7 +43,12 @@ const router = createRouter({
               path: 'AboutWeb',
               name: 'AboutWeb',
               component: AboutWeb
+            },
+            {
+              path: 'Category',
+              component: Category
             }
+
           ]
         },
         {
@@ -66,8 +72,6 @@ const router = createRouter({
     },
       ],
     },
-    
-
     {
       path: '/login',
       name: 'Login',

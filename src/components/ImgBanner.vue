@@ -9,7 +9,7 @@ const images = ref([])
 onMounted(async () => {
   // 使用动态导入，让 Vite 处理路径
   for (let i = 1; i <= 6; i++) {
-    const module = await import(`@/assets/p${i}.jpg`)
+    const module = await import(`@/assets/p${i}.webp`)
     images.value.push(module.default)
   }
 })
@@ -66,7 +66,7 @@ onMounted(async () => {
       }
     }
     img:hover {
-      transition: all 0.5s;
+      transition: all 0.8s;
       transform: scale(1.1);
     }
     animation: imgload1 1s ease-in-out;
