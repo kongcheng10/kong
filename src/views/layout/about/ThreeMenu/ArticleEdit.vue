@@ -45,7 +45,7 @@ const SelectFile = (file) => {
 }
 
 const open = async (row) => {
-    console.log(row);
+
     Drawer.value = true
     if (!row || !row.id) {
         // 新增文章
@@ -93,7 +93,7 @@ const open = async (row) => {
 const emit = defineEmits(['success']) //通知父组件刷新页面
 
 const Publish = async () => {
-    console.log('准备提交的 ID:', form.value.id)
+
     
     // 表单验证
     if (!form.value.title) {
@@ -128,11 +128,7 @@ const Publish = async () => {
             fd.append('id', String(form.value.id))
         }
 
-        // 调试日志
-        console.log('=== FormData 内容 ===')
-        for (let [key, value] of fd.entries()) {
-            console.log(key, value)
-        }
+
 
         if (form.value.id) {
             // 编辑文章

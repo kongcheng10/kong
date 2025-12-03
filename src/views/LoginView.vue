@@ -37,6 +37,7 @@ const handleLogin = async () => {
     const res = await userLogin(formData.value.username, formData.value.password)
     console.log(res);
     userStore.setToken(res.data.token)
+    await userStore.getUser()
     ElMessage.success('登录成功')
     // 登录成功后的操作，比如跳转到首页
     setTimeout(() => {

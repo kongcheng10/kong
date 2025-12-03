@@ -4,8 +4,6 @@ import { ref } from 'vue'
 
 // 定义组件属性
 const props = defineProps({
-
-
   // 表单数据模型
   formData: {
     type: Object,

@@ -14,7 +14,7 @@ import { ElMessage, ElMessageBox } from 'element-plus'
 import { formatDate } from '@/utils/format';
 import { deleteArticle, getArticleList, getCategory } from '@/api/article';
 import ArticleEdit from './ArticleEdit.vue'; // 抽屉组件
-
+import ArticleView from './ArticleView.vue' //预览组件
 const articleList = ref([]);
 
 // 最下面的分页绑定的参数
@@ -131,6 +131,14 @@ const addArticle = () => {
 const EditArticle = (row) => { 
     ArticleRef.value.open(row)
 }
+
+// 查看文章详情
+const viewVisible = ref(false) // 控制查看文章详情的显示与隐藏
+const currentViewId = ref(null) // 更具id查看对应文章详情
+const viewArticle = (row) => {
+  currentViewId.value = row.id
+  viewVisible.value = true
+}
 </script>
 
 <template>
@@ -195,7 +203,11 @@ const EditArticle = (row) => {
 
       <!-- 表格区域 -->
       <el-table :data="articleList" style="width: 100%" v-loading="loading">
-        <el-table-column label="标题" prop="title"></el-table-column>
+        <el-table-column label="标题" prop="title">
+          <template #default="{row}">
+                <el-link type="primary" underline="never" @click="viewArticle(row)">{{ row.title }}</el-link>
+            </template>
+        </el-table-column>
         <el-table-column label="分类" prop="cate_name"></el-table-column>
         <el-table-column label="发布时间" prop="pub_date">
           <template #default="{ row }">
@@ -231,6 +243,11 @@ const EditArticle = (row) => {
 
     <!-- 抽屉 -->
     <ArticleEdit ref="ArticleRef" @success="getArticleListdata" />
+    <ArticleEdit ref="ArticleRef" @success="getArticleListdata" />
+<ArticleView 
+  v-model="viewVisible" 
+  :article-id="currentViewId" 
+/>
   </div>
 </template>
 
