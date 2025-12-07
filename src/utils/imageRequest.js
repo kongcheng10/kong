@@ -2,7 +2,7 @@
 import axios from 'axios'
 // 创建一个专门请求图片的 axios 实例
 const imageRequest = axios.create({
-  baseURL: 'http://pcapi-xiaotuxian-front-devtest.itheima.net', // 图片服务专属 base
+  baseURL: 'https://pcapi-xiaotuxian-front-devtest.itheima.net', // 图片服务专属 base
   
   timeout: 10000
 })
